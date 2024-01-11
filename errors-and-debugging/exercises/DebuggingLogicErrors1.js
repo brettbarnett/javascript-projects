@@ -3,6 +3,8 @@
 // Did it?
 // Do not worry about fixing the code yet, we will do that in the next series of exercises.
 
+/* The shuttle should not have launched since the fuel level is low */
+
 let launchReady = false;
 let fuelLevel = 17000;
 let crewStatus = true;

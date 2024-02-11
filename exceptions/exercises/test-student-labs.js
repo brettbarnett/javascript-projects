@@ -1,12 +1,13 @@
 function gradeLabs(labs) {
-  try {
-    for (let i = 0; i < labs.length; i++) {
-      let lab = labs[i];
+  for (let i = 0; i < labs.length; i++) {
+    let lab = labs[i];
+    try {
       let result = lab.runLab(3);
       console.log(`${lab.student} code worked: ${result === 27}`);
+    } catch {
+      console.log("Error thrown");
+      console.log(`${lab.student} code did not work`);
     }
-  } catch {
-    console.log("Error thrown");
   }
 }
 

@@ -45,3 +45,4 @@ class CrewCandidate {
     alligator.addScore(testScore);
     console.log(`${alligator.name} scored ${testScore} on the last test and now his average is ${alligator.average()}%`);
   }
+  

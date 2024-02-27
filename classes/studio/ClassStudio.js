@@ -37,12 +37,16 @@ class CrewCandidate {
   animals.forEach((animal) => {
     console.log(`${animal.name} earned an average test score of ${animal.average()}% and has a status of ${animal.status()}.`);
   });
+
+  function generateRandomNumber(min, max){
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
   
   //Part 4 - Use the methods to boost Glad Gator’s status to Reserve or higher. How many tests will it take to reach Reserve status? How many to reach Accepted? Remember, scores cannot exceed 100%.
   console.log(`${alligator.name} is going to keep trying until he can pass the test`);
   while (alligator.status() !== "Accepted") {
-    let testScore = Math.floor(Math.random() * (100 - 80 + 1) + 80);
+    //Generate a random test score between 80 and 100;
+    let testScore = generateRandomNumber(80, 100);
     alligator.addScore(testScore);
     console.log(`${alligator.name} scored ${testScore} on the last test and now his average is ${alligator.average()}%`);
   }
-  

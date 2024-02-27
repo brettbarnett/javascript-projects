@@ -24,7 +24,7 @@ if (astronautCount <= 7)
     {
         if (totalMassKg < maximumMassLimit)
         {
-            if (fuelTempCelsius >= minimumFuelTemp && fuelTempCelsius <= maximumFuelTemp)
+            if ((fuelTempCelsius >= minimumFuelTemp) && (fuelTempCelsius <= maximumFuelTemp))
             {
                 if (fuelLevel === "100%")
                 {
@@ -53,7 +53,6 @@ if (preparedForLiftOff)
     console.log("Weather Status:", weatherStatus);
     console.log("-----------------------------------------------------------");
     console.log("Have a safe trip astronauts!");
-
 }
 else
 {
